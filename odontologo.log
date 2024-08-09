@@ -336,3 +336,16 @@ Caused by: java.lang.NumberFormatException: For input string: "Juan"
 [2024-08-08 22:52:32] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=456, nombre='Ana', apellido='Gómez'}
 [2024-08-08 22:52:32] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=456, nombre='Ana', apellido='Gómez'}
 [2024-08-08 22:52:32] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:55:08] [ INFO ] [Main:34] Array
+[2024-08-08 22:55:09] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:55:09] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:55:09] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:55:09] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:55:09] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:55:09] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:55:09] [ INFO ] [Main:25] Odontólo creado H2: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:55:09] [ INFO ] [Main:27] Odontólo creado Array: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:55:09] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:55:09] [ INFO ] [DaoImplArray:29] Listando todos los Odontologos
+[2024-08-08 22:55:09] [ INFO ] [DaoImplArray:31] Odontologos encontrados: []
+[2024-08-08 22:55:09] [ INFO ] [Main:34] Array
