@@ -1,23 +1,23 @@
 package com.ctd.dao.impl;
 
+import com.ctd.dao.DB;
+import com.ctd.dao.IDao;
 import com.ctd.modelo.Odontologo;
-import dao.DB;
-import dao.Dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import model.Odontologo;
+import java.util.List;
 import org.apache.log4j.Logger;
 
-public class DaoImplH2 implements Dao<Odontologo> {
+public class DaoImplH2 implements IDao<Odontologo> {
 
   private static final Logger LOG = Logger.getLogger(DaoImplH2.class);
 
   @Override
   public Odontologo guardar(Odontologo Odontologo) {
     LOG.info("Guardando el Odontologo: " + Odontologo);
-
+/*
     Connection connection = null;
     com.ctd.modelo.Odontologo odontologoCreado = new Odontologo();
 
@@ -58,12 +58,14 @@ public class DaoImplH2 implements Dao<Odontologo> {
     }
 
     return OdontologoCreado;
+*/
+    return null;
   }
 
   @Override
-  public Odontologo buscarTodo() {
-    LOG.info("Buscando Odontologo por el ID: " + id);
-
+  public List<Odontologo> listarTodo() {
+    //LOG.info("Buscando Odontologo por el ID: " + id);
+/*
     Connection connection = null;
     Odontologo odontologo = new Odontologo();
     
@@ -97,5 +99,7 @@ public class DaoImplH2 implements Dao<Odontologo> {
     LOG.info("Odontologo encontrado: " + odontologo);
 
     return odontologo;
+ */
+    return null;
   }
 }
