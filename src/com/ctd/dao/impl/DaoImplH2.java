@@ -15,23 +15,20 @@ public class DaoImplH2 implements IDao<Odontologo> {
   private static final Logger LOG = Logger.getLogger(DaoImplH2.class);
 
   @Override
-  public Odontologo guardar(Odontologo Odontologo) {
-    LOG.info("Guardando el Odontologo: " + Odontologo);
+  public Odontologo guardar(Odontologo odontologo) {
+    LOG.info("Guardando el Odontólogo: " + odontologo);
     Connection connection = null;
-/*
-    com.ctd.modelo.Odontologo odontologoCreado = new Odontologo();
+
 
     try {
       connection = DB.getConnection();
 
-      PreparedStatement preparedStatement =
-          connection.prepareStatement("INSERT INTO OdontologoS (NOMBRE, LABORATORIO, CANTIDAD, PRECIO, CODIGO) VALUES (?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
 
+      PreparedStatement preparedStatement =
+          connection.prepareStatement("INSERT INTO OdontologoS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?)", Statement.RETURN_GENERATED_KEYS);
+      preparedStatement.setInt(2, odontologo.getNumeroMatricula());
       preparedStatement.setString(1, odontologo.getNombre());
-      preparedStatement.setString(2, Odontologo.getLaboratorio());
-      preparedStatement.setInt(3, odontologo.getCantidad());
-      preparedStatement.setDouble(4, odontologo.getPrecio());
-      preparedStatement.setInt(5, odontologo.getCodigo());
+      preparedStatement.setString(3, odontologo.getApellido());
 
       preparedStatement.execute();
       
@@ -41,14 +38,13 @@ public class DaoImplH2 implements IDao<Odontologo> {
       
       while(rs.next()) {
         idGenerated = rs.getInt(1);
+        odontologo.setId(idGenerated);
       }
-      
-      OdontologoCreado = buscarPorId(idGenerated);
-      
-      LOG.info("Odontologo Creado: "+OdontologoCreado);
+
+      LOG.info("Odontólogo Creado: "+odontologo);
       
     } catch (Exception e) {
-      LOG.error("Error al crear el Odontologo. ", e);
+      LOG.error("Error al crear el Odontólogo. ", e);
     } finally {
       try {
         connection.close();
@@ -57,9 +53,7 @@ public class DaoImplH2 implements IDao<Odontologo> {
       }
     }
 
-    return OdontologoCreado;
-*/
-    return null;
+    return odontologo;
   }
 
   @Override

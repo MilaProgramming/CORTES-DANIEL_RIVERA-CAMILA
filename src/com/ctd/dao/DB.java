@@ -12,7 +12,7 @@ public class DB {
     ID INT PRIMARY KEY AUTO_INCREMENT, 
     NOMBRE VARCHAR(100) NOT NULL, 
     APELLIDO VARCHAR(100) NOT NULL, 
-    MATRICULA VARCHAR(100) NOT NULL);
+    MATRICULA INT NOT NULL);
   """;
 
   private static  final Logger LOG = Logger.getLogger(DB.class);
