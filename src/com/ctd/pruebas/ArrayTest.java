@@ -1,15 +1,16 @@
 package com.ctd.pruebas;
-/*
+
 import com.ctd.modelo.Odontologo;
 import com.ctd.dao.impl.DaoImplArray;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import static org.junit.Assert.*;
-*/
+
+import static org.junit.jupiter.api.Assertions.*;
+
 public class ArrayTest {
-/*
+
     private DaoImplArray dao;
 
     @BeforeEach
@@ -46,5 +47,4 @@ public class ArrayTest {
         assertEquals("Ana", odontologos.get(1).getNombre(), "El segundo odontólogo debe ser Ana");
         assertEquals("Gómez", odontologos.get(1).getApellido(), "El segundo odontólogo debe ser Gómez");
     }
-*/
 }
