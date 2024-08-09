@@ -17,8 +17,8 @@ public class DaoImplH2 implements IDao<Odontologo> {
   @Override
   public Odontologo guardar(Odontologo Odontologo) {
     LOG.info("Guardando el Odontologo: " + Odontologo);
-/*
     Connection connection = null;
+/*
     com.ctd.modelo.Odontologo odontologoCreado = new Odontologo();
 
     try {
