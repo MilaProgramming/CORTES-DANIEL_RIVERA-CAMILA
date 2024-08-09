@@ -1,5 +1,6 @@
 package com.ctd.dao.impl;
 
+import com.ctd.modelo.Odontologo;
 import dao.DB;
 import dao.Dao;
 import java.sql.Connection;
@@ -9,16 +10,16 @@ import java.sql.Statement;
 import model.Odontologo;
 import org.apache.log4j.Logger;
 
-public class DaoImpl implements Dao<Odontologo> {
+public class DaoImplH2 implements Dao<Odontologo> {
 
-  private static final Logger LOG = Logger.getLogger(DaoImpl.class);
+  private static final Logger LOG = Logger.getLogger(DaoImplH2.class);
 
   @Override
   public Odontologo guardar(Odontologo Odontologo) {
     LOG.info("Guardando el Odontologo: " + Odontologo);
 
     Connection connection = null;
-    Odontologo odontologoCreado = new Odontologo();
+    com.ctd.modelo.Odontologo odontologoCreado = new Odontologo();
 
     try {
       connection = DB.getConnection();
