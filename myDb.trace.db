@@ -4,3 +4,17 @@ INSERT INTO OdontologoS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [42104-230]
 2024-08-08 22:17:42.610229-05:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
 SELECT * from ODONTOLOGOS [42104-230]
+2024-08-08 22:31:03.067522-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Juan' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO OdontologoS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [22018-230]
+2024-08-08 22:33:32.874538-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Juan' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [22018-230]
+2024-08-08 22:34:03.481423-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Juan' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [22018-230]
+2024-08-08 22:36:30.725302-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Juan' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [22018-230]
+2024-08-08 22:38:11.165811-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "Juan" [22018-230]

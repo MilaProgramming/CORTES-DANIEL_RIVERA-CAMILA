@@ -25,10 +25,10 @@ public class DaoImplH2 implements IDao<Odontologo> {
       connection = DB.getConnection();
 
       PreparedStatement preparedStatement =
-          connection.prepareStatement("INSERT INTO OdontologoS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?)", Statement.RETURN_GENERATED_KEYS);
-      preparedStatement.setInt(2, odontologo.getNumeroMatricula());
+          connection.prepareStatement("INSERT INTO ODONTOLOGOS (NOMBRE, APELLIDO, MATRICULA) VALUES (?,?,?)", Statement.RETURN_GENERATED_KEYS);
       preparedStatement.setString(1, odontologo.getNombre());
-      preparedStatement.setString(3, odontologo.getApellido());
+      preparedStatement.setString(2, odontologo.getApellido());
+      preparedStatement.setInt(3, odontologo.getNumeroMatricula());
 
       preparedStatement.execute();
       
@@ -74,9 +74,9 @@ public class DaoImplH2 implements IDao<Odontologo> {
         odontologos.add(
             new Odontologo(
                 rs.getInt(1),
-                rs.getInt(2),
-                rs.getString(3),
-                rs.getString(4))
+                rs.getInt(4),
+                rs.getString(2),
+                rs.getString(3))
         );
       }
 

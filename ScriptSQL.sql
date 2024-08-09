@@ -6,8 +6,8 @@ USE backendPrueba;
 
 -- Crear la tabla Odontologos
 CREATE TABLE Odontologos (
-    numeroMatricula INT PRIMARY KEY AUTO_INCREMENT, 
-    nombre VARCHAR(50) NOT NULL, 
-    apellido VARCHAR(50) NOT NULL 
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    numeroMatricula INT
 );
-

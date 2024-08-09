@@ -58,3 +58,281 @@ SELECT * from ODONTOLOGOS [42104-230]
 	at com.ctd.dao.impl.DaoImplH2.listarTodo(DaoImplH2.java:69)
 	at com.ctd.service.OdontologoService.listarTodos(OdontologoService.java:21)
 	at com.ctd.main.Main.main(Main.java:22)
+[2024-08-08 22:30:28] [ INFO ] [DaoImplArray:17] Guardando el Odontologo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:30:28] [ INFO ] [DaoImplArray:22] Odontologo Guardado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:30:28] [ INFO ] [DaoImplArray:17] Guardando el Odontologo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:30:28] [ INFO ] [DaoImplArray:22] Odontologo Guardado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:30:28] [ INFO ] [DaoImplArray:17] Guardando el Odontologo: Odontologo{numeroMatricula=456, nombre='Ana', apellido='Gómez'}
+[2024-08-08 22:30:28] [ INFO ] [DaoImplArray:22] Odontologo Guardado: Odontologo{numeroMatricula=456, nombre='Ana', apellido='Gómez'}
+[2024-08-08 22:30:28] [ INFO ] [DaoImplArray:29] Listando todos los Odontologos
+[2024-08-08 22:30:28] [ INFO ] [DaoImplArray:31] Odontologos encontrados: [Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}, Odontologo{numeroMatricula=456, nombre='Ana', apellido='Gómez'}]
+[2024-08-08 22:30:47] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:31:02] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:31:03] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Márquez'}
+[2024-08-08 22:31:03] [ ERROR] [DaoImplH2:47] Error al crear el Odontólogo. 
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Juan' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO OdontologoS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [22018-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.table.Column.getDataConversionError(Column.java:450)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:409)
+	at org.h2.table.Table.convertInsertRow(Table.java:963)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:212)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:262)
+	at com.ctd.dao.impl.DaoImplH2.guardar(DaoImplH2.java:33)
+	at com.ctd.dao.impl.DaoImplH2.guardar(DaoImplH2.java:14)
+	at com.ctd.service.OdontologoService.guardar(OdontologoService.java:21)
+	at com.ctd.main.Main.main(Main.java:21)
+Caused by: org.h2.message.DbException: Data conversion error converting "Juan" [22018-230]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:133)
+	at org.h2.value.Value.convertToInt(Value.java:1601)
+	at org.h2.value.Value.convertTo(Value.java:1161)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1118)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:406)
+	... 12 more
+Caused by: org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "Juan" [22018-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 18 more
+Caused by: java.lang.NumberFormatException: For input string: "Juan"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:131)
+	... 16 more
+[2024-08-08 22:31:03] [ INFO ] [Main:23] Odontólo creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Márquez'}
+[2024-08-08 22:31:03] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:33:16] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:33:16] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:33:16] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Márquez'}
+[2024-08-08 22:33:41] [ ERROR] [DaoImplH2:47] Error al crear el Odontólogo. 
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Juan' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [22018-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.table.Column.getDataConversionError(Column.java:450)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:409)
+	at org.h2.table.Table.convertInsertRow(Table.java:963)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:212)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:262)
+	at com.ctd.dao.impl.DaoImplH2.guardar(DaoImplH2.java:33)
+	at com.ctd.dao.impl.DaoImplH2.guardar(DaoImplH2.java:14)
+	at com.ctd.service.OdontologoService.guardar(OdontologoService.java:21)
+	at com.ctd.main.Main.main(Main.java:21)
+Caused by: org.h2.message.DbException: Data conversion error converting "Juan" [22018-230]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:133)
+	at org.h2.value.Value.convertToInt(Value.java:1601)
+	at org.h2.value.Value.convertTo(Value.java:1161)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1118)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:406)
+	... 12 more
+Caused by: org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "Juan" [22018-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 18 more
+Caused by: java.lang.NumberFormatException: For input string: "Juan"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:131)
+	... 16 more
+[2024-08-08 22:34:03] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:34:03] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:34:03] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:34:03] [ ERROR] [DaoImplH2:47] Error al crear el Odontólogo. 
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Juan' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [22018-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.table.Column.getDataConversionError(Column.java:450)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:409)
+	at org.h2.table.Table.convertInsertRow(Table.java:963)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:212)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:262)
+	at com.ctd.dao.impl.DaoImplH2.guardar(DaoImplH2.java:33)
+	at com.ctd.dao.impl.DaoImplH2.guardar(DaoImplH2.java:14)
+	at com.ctd.service.OdontologoService.guardar(OdontologoService.java:21)
+	at com.ctd.main.Main.main(Main.java:21)
+Caused by: org.h2.message.DbException: Data conversion error converting "Juan" [22018-230]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:133)
+	at org.h2.value.Value.convertToInt(Value.java:1601)
+	at org.h2.value.Value.convertTo(Value.java:1161)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1118)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:406)
+	... 12 more
+Caused by: org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "Juan" [22018-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 18 more
+Caused by: java.lang.NumberFormatException: For input string: "Juan"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:131)
+	... 16 more
+[2024-08-08 22:34:03] [ INFO ] [Main:23] Odontólo creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:34:03] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:36:30] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:36:30] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:36:30] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:36:30] [ ERROR] [DaoImplH2:47] Error al crear el Odontólogo. 
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Juan' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [22018-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.table.Column.getDataConversionError(Column.java:450)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:409)
+	at org.h2.table.Table.convertInsertRow(Table.java:963)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:212)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:262)
+	at com.ctd.dao.impl.DaoImplH2.guardar(DaoImplH2.java:33)
+	at com.ctd.dao.impl.DaoImplH2.guardar(DaoImplH2.java:14)
+	at com.ctd.service.OdontologoService.guardar(OdontologoService.java:21)
+	at com.ctd.main.Main.main(Main.java:21)
+Caused by: org.h2.message.DbException: Data conversion error converting "Juan" [22018-230]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:133)
+	at org.h2.value.Value.convertToInt(Value.java:1601)
+	at org.h2.value.Value.convertTo(Value.java:1161)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1118)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:406)
+	... 12 more
+Caused by: org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "Juan" [22018-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 18 more
+Caused by: java.lang.NumberFormatException: For input string: "Juan"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:131)
+	... 16 more
+[2024-08-08 22:36:30] [ INFO ] [Main:23] Odontólo creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:36:30] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:37:57] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:37:57] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:37:57] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:38:11] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:38:11] [ INFO ] [Main:23] Odontólo creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:38:11] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:38:11] [ ERROR] [DaoImplH2:84] Error al listar los Odontologos. 
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "Juan" [22018-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:133)
+	at org.h2.jdbc.JdbcResultSet.getIntInternal(JdbcResultSet.java:348)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:319)
+	at com.ctd.dao.impl.DaoImplH2.listarTodo(DaoImplH2.java:77)
+	at com.ctd.service.OdontologoService.listarTodos(OdontologoService.java:25)
+	at com.ctd.main.Main.main(Main.java:25)
+Caused by: java.lang.NumberFormatException: For input string: "Juan"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:131)
+	... 5 more
+[2024-08-08 22:42:02] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:42:02] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:42:02] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:42:02] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:42:02] [ INFO ] [DaoImplArray:17] Guardando el Odontologo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:42:02] [ INFO ] [DaoImplArray:22] Odontologo Guardado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:42:02] [ INFO ] [Main:25] Odontólo creado H2: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:42:02] [ INFO ] [Main:27] Odontólo creado Array: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:42:02] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:42:18] [ INFO ] [DaoImplArray:29] Listando todos los Odontologos
+[2024-08-08 22:42:18] [ INFO ] [DaoImplArray:31] Odontologos encontrados: [Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}]
+[2024-08-08 22:43:29] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:43:29] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:43:30] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:43:30] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:43:30] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:43:30] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:43:30] [ INFO ] [Main:25] Odontólo creado H2: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:43:30] [ INFO ] [Main:27] Odontólo creado Array: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:43:30] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:43:30] [ INFO ] [DaoImplArray:29] Listando todos los Odontologos
+[2024-08-08 22:43:30] [ INFO ] [DaoImplArray:31] Odontologos encontrados: []
+[2024-08-08 22:43:53] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:43:53] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:43:53] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:43:53] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:43:53] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:43:53] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:43:53] [ INFO ] [Main:25] Odontólo creado H2: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:43:53] [ INFO ] [Main:27] Odontólo creado Array: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:43:53] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:43:53] [ INFO ] [DaoImplArray:29] Listando todos los Odontologos
+[2024-08-08 22:43:53] [ INFO ] [DaoImplArray:31] Odontologos encontrados: []
+[2024-08-08 22:43:53] [ INFO ] [Main:34] Array
+[2024-08-08 22:44:21] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:44:21] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:44:21] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:44:21] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:44:21] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:44:21] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:44:21] [ INFO ] [Main:25] Odontólo creado H2: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Galindo'}
+[2024-08-08 22:44:21] [ INFO ] [Main:27] Odontólo creado Array: Odontologo{numeroMatricula=124, nombre='Array', apellido='Collection'}
+[2024-08-08 22:44:21] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:45:03] [ INFO ] [DaoImplArray:29] Listando todos los Odontologos
+[2024-08-08 22:45:03] [ INFO ] [DaoImplArray:31] Odontologos encontrados: []
+[2024-08-08 22:46:37] [ INFO ] [DaoImplArray:17] Guardando el Odontologo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:46:37] [ INFO ] [DaoImplArray:22] Odontologo Guardado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:48:11] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:48:12] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:48:12] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:48:12] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:48:12] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=456, nombre='Ana', apellido='Gómez'}
+[2024-08-08 22:48:12] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=456, nombre='Ana', apellido='Gómez'}
+[2024-08-08 22:48:12] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
+[2024-08-08 22:48:30] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:48:30] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:49:05] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:49:06] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:50:02] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:50:02] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:50:02] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:50:02] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:52:08] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:52:08] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:52:08] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:52:08] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:52:32] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:52:32] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:52:32] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:52:32] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:52:32] [ INFO ] [DB:32] Conexión creada
+[2024-08-08 22:52:32] [ INFO ] [DB:37] Tabla creada
+[2024-08-08 22:52:32] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:52:32] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=123, nombre='Juan', apellido='Pérez'}
+[2024-08-08 22:52:32] [ INFO ] [DaoImplH2:20] Guardando el Odontólogo: Odontologo{numeroMatricula=456, nombre='Ana', apellido='Gómez'}
+[2024-08-08 22:52:32] [ INFO ] [DaoImplH2:44] Odontólogo Creado: Odontologo{numeroMatricula=456, nombre='Ana', apellido='Gómez'}
+[2024-08-08 22:52:32] [ INFO ] [DaoImplH2:61] Buscando todos los Odontólogos
