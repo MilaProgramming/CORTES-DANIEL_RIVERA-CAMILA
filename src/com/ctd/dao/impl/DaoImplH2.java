@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 
@@ -22,7 +23,6 @@ public class DaoImplH2 implements IDao<Odontologo> {
 
     try {
       connection = DB.getConnection();
-
 
       PreparedStatement preparedStatement =
           connection.prepareStatement("INSERT INTO OdontologoS (MATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?)", Statement.RETURN_GENERATED_KEYS);
@@ -58,30 +58,30 @@ public class DaoImplH2 implements IDao<Odontologo> {
 
   @Override
   public List<Odontologo> listarTodo() {
-    //LOG.info("Buscando Odontologo por el ID: " + id);
-/*
+    LOG.info("Buscando todos los Odontólogos");
+
     Connection connection = null;
-    Odontologo odontologo = new Odontologo();
+    List<Odontologo> odontologos = new ArrayList<>();
     
     try {
       connection = DB.getConnection();
 
-      PreparedStatement preparedStatement = connection.prepareStatement("SELECT * from OdontologoS WHERE ID = ?");
-      preparedStatement.setInt(1, id);
-      
+      PreparedStatement preparedStatement = connection.prepareStatement("SELECT * from ODONTOLOGOS");
+
       ResultSet rs = preparedStatement.executeQuery();
 
       while (rs.next()) {
-        odontologo.setId(rs.getInt(1));
-        odontologo.setNombre(rs.getString(2));
-        odontologo.setLaboratorio(rs.getString(3));
-        odontologo.setCantidad(rs.getInt(4));
-        odontologo.setPrecio(rs.getDouble(5));
-        odontologo.setCodigo(rs.getInt(6));
+        odontologos.add(
+            new Odontologo(
+                rs.getInt(1),
+                rs.getInt(2),
+                rs.getString(3),
+                rs.getString(4))
+        );
       }
 
     } catch (Exception e) {
-      LOG.error("Error al buscar el Odontologo por id. ", e);
+      LOG.error("Error al listar los Odontologos. ", e);
     } finally {
       try {
         connection.close();
@@ -90,10 +90,6 @@ public class DaoImplH2 implements IDao<Odontologo> {
       }
     }
 
-    LOG.info("Odontologo encontrado: " + odontologo);
-
-    return odontologo;
- */
-    return null;
+    return odontologos;
   }
 }

@@ -9,6 +9,13 @@ public class Odontologo {
 
     public Odontologo(){}
 
+    public Odontologo(Integer id, Integer numeroMatricula, String nombre, String apellido) {
+        this.id = id;
+        this.numeroMatricula = numeroMatricula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
     public Odontologo(Integer numeroMatricula, String nombre, String apellido) {
         this.numeroMatricula = numeroMatricula;
         this.nombre = nombre;
