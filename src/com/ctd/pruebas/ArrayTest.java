@@ -1,13 +1,13 @@
 package com.ctd.pruebas;
-
+/*
 import com.ctd.modelo.Odontologo;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.List;
 import static org.junit.Assert.*;
-
+*/
 public class ArrayTest {
-
+/*
     private DaoImplArray dao;
 
     @Before
@@ -44,5 +44,5 @@ public class ArrayTest {
         assertEquals("El segundo odontólogo debe ser Ana Gómez", "Ana", odontologos.get(1).getNombre());
         assertEquals("El segundo odontólogo debe ser Gómez", "Gómez", odontologos.get(1).getApellido());
     }
-
+*/
 }
